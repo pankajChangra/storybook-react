@@ -1,1 +1,1 @@
-# storybook-react
+# storybook-react-typescript
