@@ -9,6 +9,9 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/addon-viewport",
     "@storybook/addon-actions",
+    "@storybook/addon-docs",
+    "@storybook/addon-knobs",
+    "@storybook/addon-a11y",
     "@storybook/preset-create-react-app"
   ],
   "framework": "@storybook/react",
@@ -23,5 +26,8 @@ module.exports = {
         esModuleInterop: false,
       },
     }
-  }
+  },
+  features: {
+    emotionAlias: false,
+  },
 }

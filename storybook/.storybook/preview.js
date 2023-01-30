@@ -1,6 +1,10 @@
-import { addDecorator } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { Box, ChakraBaseProvider, extendBaseTheme  } from '@chakra-ui/react'
 import chakraTheme from '@chakra-ui/theme'
+import '@storybook/addon-console';
+import { withKnobs } from "@storybook/addon-knobs";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { withA11y } from "@storybook/addon-a11y";
 
 const { Button } = chakraTheme.components
 
@@ -27,3 +31,16 @@ export const parameters = {
 addDecorator(story => <ChakraBaseProvider theme={theme}>
   <Box m='4'>{story()}</Box>
 </ChakraBaseProvider>)
+
+// check label and set bool value for button (enabled/disabled)
+addDecorator(withKnobs)
+
+// check accessibility
+addDecorator(withA11y)
+
+// add parameter for viewport addon
+addParameters({
+  viewport: {
+    viewports: INITIAL_VIEWPORTS
+  }
+})
