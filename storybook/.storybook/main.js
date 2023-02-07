@@ -28,6 +28,7 @@ module.exports = {
     }
   },
   features: {
-    emotionAlias: false,
+    emotionAlias: false,    
+    interactionsDebugger: true,
   },
 }

@@ -7,7 +7,5 @@ export default {
 }
 
 export const Small = () => <FormInput size='small' placeholder='small size' />
-export const Medium = () => <FormInput size='medium' placeholder='medium size' />
-export const Large = () => <FormInput size='large' placeholder='large size' />
 
 Small.storyName =  'Small Input';
